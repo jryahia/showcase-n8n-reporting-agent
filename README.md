@@ -1,6 +1,6 @@
 # n8n Reporting Agent
 
-**Collects CRM, analytics and revenue data on a schedule, summarizes trends and delivers formatted reports by email or Slack.**
+**Generates periodic business reports with trend summaries and delivers them by email (SMTP) or Slack on a cron schedule. Data sources are sample data in this version.**
 
 > **This is a proprietary project. Source code is private. This page showcases the system's architecture and results.**
 
@@ -10,7 +10,7 @@
 
 ## Problem it solves
 
-Weekly reporting usually means someone copying numbers from several tools into a document. This agent collects the data, writes the summary and delivers it on a cron schedule.
+Weekly reporting usually means someone copying numbers from several tools into a document. This agent collects the data, writes the summary and delivers it on a cron schedule. It is built as the webhook backend for a n8n scenario: the automation platform handles triggers, and this service holds the logic and data.
 
 ## Architecture
 
@@ -31,17 +31,21 @@ Weekly reporting usually means someone copying numbers from several tools into a
 
 ## Tech stack
 
-![Python](https://img.shields.io/badge/Python-161b22?style=for-the-badge&labelColor=161b22&color=161b22) ![FastAPI](https://img.shields.io/badge/FastAPI-161b22?style=for-the-badge&labelColor=161b22&color=161b22) ![n8n](https://img.shields.io/badge/n8n-161b22?style=for-the-badge&labelColor=161b22&color=161b22) ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-161b22?style=for-the-badge&labelColor=161b22&color=161b22) ![Slack Webhooks](https://img.shields.io/badge/Slack%20Webhooks-161b22?style=for-the-badge&labelColor=161b22&color=161b22) ![SMTP](https://img.shields.io/badge/SMTP-161b22?style=for-the-badge&labelColor=161b22&color=161b22)
+![Python](https://img.shields.io/badge/Python-161b22?style=for-the-badge&labelColor=161b22&color=161b22) ![FastAPI](https://img.shields.io/badge/FastAPI-161b22?style=for-the-badge&labelColor=161b22&color=161b22) ![Webhooks](https://img.shields.io/badge/Webhooks-161b22?style=for-the-badge&labelColor=161b22&color=161b22) ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-161b22?style=for-the-badge&labelColor=161b22&color=161b22) ![Slack Webhooks](https://img.shields.io/badge/Slack%20Webhooks-161b22?style=for-the-badge&labelColor=161b22&color=161b22) ![SMTP](https://img.shields.io/badge/SMTP-161b22?style=for-the-badge&labelColor=161b22&color=161b22)
 
 ## What it does in practice
 
-- Turns a recurring manual reporting task into a scheduled job.
+- Prototype stage: report generation, scheduling and delivery are built; CRM, analytics and revenue collectors return sample data.
 
 ## Screenshots
 
 **Reports, data sources and schedules**
 
 ![Reports, data sources and schedules](assets/00-dashboard.png)
+
+**API surface: reports, sources, schedules, delivery**
+
+![API surface: reports, sources, schedules, delivery](assets/10-api.png)
 
 ---
 
