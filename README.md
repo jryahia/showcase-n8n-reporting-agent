@@ -39,6 +39,8 @@ Weekly reporting usually means someone copying numbers from several tools into a
 
 ## Screenshots
 
+> Screenshots show the app running on seeded demo data, not client data.
+
 **Reports, data sources and schedules**
 
 ![Reports, data sources and schedules](assets/00-dashboard.png)
